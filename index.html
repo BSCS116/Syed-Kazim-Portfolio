@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Kazim | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- AOS Animate on Scroll -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link rel="icon" type="image/png" href="media/profile/favicon.png">
+
+
+
+</head>
+<body>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="loader"></div>
+</div>
+
+
+
+ <header>
+  <nav class="navbar">
+    <div class="logo">Syed Kazim Ali</div>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+  <!-- Hero Section -->
+  <section id="home" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300" class="hero">
+    <div class="hero-content">
+      <h1>Hi, I'm <span class="highlight">Syed Kazim Ali</span></h1>
+      <h2><span id="typing"></span></h2>
+      <p>A passionate Computer Science student building impactful tech solutions.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn">See Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="media/profile/kazmi-formal.jpg" alt="Kazmi Profile">
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+<section id="about" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>👋 About Me</h2>
+      <p>
+        I am a passionate Computer Science undergraduate at 
+        <strong>Hyderabad Institute for Technology and Management Sciences</strong>, currently in my second semester. I’m driven by creativity, curiosity, and a deep desire to achieve financial freedom through impactful technology.
+      </p>
+      <p>
+        My interests span across <strong>Cybersecurity, AI, Web Apps, and DevOps automation</strong>. I actively build projects, pursue certifications (like C++, Prompt Engineering, Java, GitHub Actions), and explore real-world tools like Git, GitHub, and the terminal.
+    </p>
+<p>
+  My long-term goal is to become a skilled <strong>Cybersecurity Analyst</strong> and eventually establish my own <strong>software house</strong> — delivering innovative, secure, and user-focused solutions while excelling in a global tech company.
+</p>
+
+    </div>
+    <div class="about-image">
+      <img src="media/profile/kazmi-formal.jpg" alt="Kazmi Profile">
+    </div>
+  </div>
+</section>
+
+
+<!-- Skills Section -->
+<section id="skills"  data-aos="zoom-in"  data-aos-duration="1200" data-aos-delay="300" class="skills">
+  <div class="skills-container">
+    <h2>🛠️ Skills</h2>
+
+    <div class="skill-category">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li onclick="openSkillModal('cpp')">C++</li>
+        <li onclick="openSkillModal('csharp')">C# (Basics)</li>
+        <li onclick="openSkillModal('java')">Java</li>
+        <li onclick="openSkillModal('python')">Python (Basics)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li onclick="openSkillModal('html')">HTML</li>
+        <li onclick="openSkillModal('css')">CSS</li>
+        <li onclick="openSkillModal('js')">JavaScript (Basics)</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Tools & IDEs</h3>
+      <ul>
+        <li onclick="openSkillModal('vscode')">VS Code</li>
+        <li onclick="openSkillModal('terminal')">CMD / Terminal</li>
+        <li onclick="openSkillModal('intellij')">IntelliJ</li>
+        <li onclick="openSkillModal('git')">Git</li>
+        <li onclick="openSkillModal('arduino')">Arduino UNO</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Concepts</h3>
+      <ul>
+        <li onclick="openSkillModal('oop')">OOP</li>
+        <li onclick="openSkillModal('file')">File Handling</li>
+        <!--
+        <li onclick="openSkillModal('ai')">AI/ML Basics</li>
+        -->
+        <li onclick="openSkillModal('cyber')">Cybersecurity</li>
+        <li onclick="openSkillModal('githubAutomation')">GitHub Actions</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li onclick="openSkillModal('leadership')">Leadership</li>
+        <li onclick="openSkillModal('problem')">Problem Solving</li>
+        <li onclick="openSkillModal('presentation')">Presentation</li>
+        <li onclick="openSkillModal('teamwork')">Teamwork</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Skills -->
+<div id="skillModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSkillModal()">&times;</span>
+    <h3 id="skill-title">Skill Title</h3>
+    <p id="skill-description">Skill info will go here...</p>
+  </div>
+</div>
+
+
+<!-- Achievements Section -->
+<section id="achievements"  data-aos="zoom-out"  data-aos-duration="1200" data-aos-delay="300" class="achievements">
+  <div class="achievements-container">
+    <h2>🏆 Achievements</h2>
+
+    <div class="achievement-grid">
+      <div class="achievement-card" onclick="openAchievement('hero')">
+        🛡️ Hero of Hyderabad Shield
+      </div>
+      <div class="achievement-card" onclick="openAchievement('book')">
+        📖 Author: Periodic Table (Book)
+      </div>
+      <div class="achievement-card" onclick="openAchievement('lead')">
+        💻 Lead Developer (Multiple Projects)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Achievements -->
+<div id="achievementModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeAchievementModal()">&times;</span>
+    <h3 id="achievement-title">Achievement Title</h3>
+    <p id="achievement-description">Description goes here...</p>
+  </div>
+</div>
+
+
+<!-- Certifications Section -->
+<section id="certifications" data-aos="zoom-in"  data-aos-duration="1200" data-aos-delay="300" class="certifications">
+  <div class="certifications-container">
+    <h2>📜 Certifications</h2>
+
+    <div class="cert-grid">
+      <div class="cert-card" onclick="openCert('cpp')">
+        <img src="media/certificates/cpp-essentials.jpg" alt="C++ Essentials - Cisco">
+        <p>C++ Essentials</p>
+      </div>
+
+     <div class="cert-card" onclick="openCert('cppSololearn')">
+      <img src="media/certificates/cpp-sololearn.jpg" alt="C++ SoloLearn Certificate">
+      <p>C++ Programming (SoloLearn)</p>
+    </div>
+ 
+
+      <div class="cert-card" onclick="openCert('promptEng')">
+        <img src="media/certificates/prompt-engineering-sololearn.jpg" alt="Prompt Engineering - SoloLearn">
+        <p>Prompt Engineering (SoloLearn)</p>
+      </div>
+
+      
+
+      
+      <!--
+      <div class="cert-card" onclick="openCert('java')">
+         <img id="cert-image" src="" alt="Certificate Image">
+        <div id="cert-placeholder" style="display:none; color: #ccc; margin: 1rem 0;">Course In Progress</div>
+        <div class="cert-placeholder">Course In Progress</div>
+        <p>Java Programming Basics</p>
+      </div>
+
+      
+      <div class="cert-card" onclick="openCert('cyber')">
+        <img src="media/certificates/cybersecurity.jpg" alt="Cybersecurity - Cisco">
+        <p>Cybersecurity (Cisco)</p>
+      </div>
+      -->
+
+      <!--
+      <div class="cert-card" onclick="openCert('cyber')">
+        <img id="cert-image" src="" alt="Certificate Image">
+        <div id="cert-placeholder" style="display:none; color: #ccc; margin: 1rem 0;">Course In Progress</div>
+        <div class="cert-placeholder">Course In Progress</div>
+        <p>Cybersecurity (Cisco)</p>
+      </div>
+      
+
+      <div class="cert-card" onclick="openCert('frontend')">
+        <img src="media/certificates/frontend-sololearn.jpg" alt="Frontend - SoloLearn">
+        <p>Frontend for Beginners</p>
+      </div>
+      
+      <div class="cert-card" onclick="openCert('githubActions')">
+        <img src="media/certificates/github-actions.jpg" alt="GitHub Actions">
+        <p>GitHub Actions (Microsoft Learn)</p>
+      </div>
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Certifications -->
+<div id="certModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCertModal()">&times;</span>
+    <h3 id="cert-title">Certificate Title</h3>
+    <img id="cert-image" src="" alt="Certificate Preview" style="max-width: 100%; margin-top: 1rem;">
+    <p id="cert-description" style="margin-top: 1rem;">Certificate info will appear here...</p>
+  </div>
+</div>
+
+
+<!-- Projects Section -->
+<section id="projects" data-aos="zoom-out"  data-aos-duration="1200" data-aos-delay="300" class="projects">
+  <div class="projects-container">
+    <h2>💻 Projects</h2>
+
+    <div class="project-grid">
+     
+
+    
+
+     
+
+      <div class="project-card" onclick="openProject('clothShop')">
+  <img src="media/projects/cloth-shop-output.png" alt="Cloth Shop Management System">
+  <h3>Cloth Shop Management</h3>
+  <p>C++ | Console | Inventory, Billing</p>
+</div>
+
+ <div class="project-card" onclick="openProject('atm')">
+        <img src="media/projects/atm-simulator-output.png" alt="Banking System">
+        <h3>ATM Banking Simulator</h3>
+        <p>C++ | File | PIN Recovery</p>
+      </div>
+
+       <div class="project-card" onclick="openProject('hospital')">
+        <img src="media/projects/hospital-code.png" alt="Hospital Management System">
+        <h3>Hospital Management</h3>
+        <p>Java | OOP</p>
+      </div>
+
+        <div class="project-card" onclick="openProject('carbike')">
+        <img src="media/projects/car-rental-code.png" alt="Car & Bike Rental">
+        <h3>Car & Bike Rental</h3>
+        <p>Java | File Handling</p>
+      </div>
+
+
+
+    </div>
+  </div>
+</section>
+
+<!-- Project Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeProjectModal()">&times;</span>
+    <h3 id="project-title">Project Title</h3>
+    <img id="project-image" src="" alt="" style="max-width: 100%; margin: 1rem 0;">
+    <p id="project-description">Project details here...</p>
+  </div>
+</div>
+
+
+<!-- Media Gallery Section -->
+<section id="media" data-aos="zoom-in"  data-aos-duration="1200" data-aos-delay="300" class="media">
+  <div class="media-container">
+    <h2>📸 Media Gallery</h2>
+
+    <div class="gallery-grid">
+
+      <!-- Achievement Images -->
+       <img src="media/achievement/periodic-table-book.png" alt=" Periodic Table (Book)" onclick="openLightbox(this)">
+       
+       <!--
+       <img src="media/achievement/hero-shield.png" alt="Hero Shield" onclick="openLightbox(this)">
+       -->
+
+      <!-- Certificate Images -->
+      <img src="media/certificates/cpp-essentials.jpg" alt="C++ Certificate" onclick="openLightbox(this)">
+      <img src="media/certificates/cpp-sololearn.jpg" alt="C++ Certificate" onclick="openLightbox(this)">
+      <img src="media/certificates/prompt-engineering-sololearn.jpg" alt="Prompt Engineering" onclick="openLightbox(this)">
+      <img src="media/certificates/github-actions.jpg" alt="GitHub Actions Up Coming Certificate" onclick="openLightbox(this)">
+      
+      <!--
+      <img src="media/certificates/cybersecurity.jpg" alt="Cybersecurity Cert" onclick="openLightbox(this)">
+      <img src="media/certificates/java-basics.jpg" alt="Java Certificate" onclick="openLightbox(this)">
+      <img src="media/certificates/github-actions.jpg" alt="GitHub Actions" onclick="openLightbox(this)">
+      -->
+
+      <!-- Project Screenshots -->
+       <img src="media/projects/cloth-shop-output.png" alt="Cloth-Shop" onclick="openLightbox(this)">
+      <img src="media/projects/atm-simulator-output.png" alt="ATM Output" onclick="openLightbox(this)">
+      <img src="media/projects/hospital-code.png" alt="Hospital Code" onclick="openLightbox(this)">
+      <img src="media/projects/car-rental-code.png" alt="Car Rental" onclick="openLightbox(this)">
+
+      <!-- Profile Photo -->
+      <img src="media/profile/kazmi-formal.jpg" alt="Kazmi Formal" onclick="openLightbox(this)">
+      <img src="media/profile/kazmi-formal3.jpg" alt="Kazmi Formal 3" onclick="openLightbox(this)">
+      <img src="media/profile/kazmi-formal2.jpg" alt="Kazmi Formal 2" onclick="openLightbox(this)">
+      
+      <!--
+      <img src="media/profile/snap.png" alt="Kazmi Formal 1" onclick="openLightbox(this)">
+      
+      -->
+    </div>
+  </div>
+</section> 
+
+<!-- Lightbox Modal -->
+<div id="lightboxModal" class="modal">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="modal-img" id="lightboxImage" src="" alt="Full Image">
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" data-aos="flip-left"  data-aos-duration="1200" data-aos-delay="300" class="contact">
+  <div class="contact-container">
+    <h2>📥 Contact Me</h2>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:syedkazmi2872@gmail.com">syedkazmi2872@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+923213858532">+92 321 3858 532</a></p>
+      <p><strong>Location:</strong> Hyderabad, Pakistan</p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/syed-kazim-ali-39b128273" target="_blank" class="linkedin">LinkedIn</a>
+      <a href="https://www.instagram.com/kazmi_syed605" target="_blank" class="instagram">Instagram</a>
+      <a href="https://github.com/bscs116" target="_blank" class="github">GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Send Message Form -->
+<div class="row" data-aos="zoom-in"  data-aos-duration="1200" data-aos-delay="300">
+  <div class="contact-form">
+    <h3>📤 Send Message</h3>
+    <form action="https://formsubmit.co/syedkazmi2872@gmail.com" method="POST">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Name" required>
+      </div>
+      <div class="input-box">
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <textarea name="message" rows="6" placeholder="Message" required></textarea>
+      </div>
+
+      <!-- Optional hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://bscs116.github.io/my-portfolio1/thank-you.html">
+
+      <div class="input-box">
+        <input type="submit" class="send-btn" value="Send">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer" >
+  <div class="footer-container">
+     <p>&copy; 2025 <strong>Syed Kazim Ali</strong>. All rights reserved.</p>
+    <p>Built with ❤️ & using HTML, CSS, and JavaScript</p>
+  </div>
+</footer>
+
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    offset: 100,
+    delay: 100,
+    once: false, // 👈 animate every time element enters view
+    mirror: true // 👈 animate out when scrolling back up
+  });
+
+  window.addEventListener("load", function () {
+  const loader = document.getElementById("preloader");
+  if (loader) loader.style.display = "none";
+});
+
+</script>
+
+</body>
